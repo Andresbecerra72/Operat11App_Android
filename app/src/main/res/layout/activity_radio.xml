@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RadioPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="apps.paquete.andres.operat11.RadioActivity">
+
+    <ImageButton
+        android:id="@+id/btScreenShot"
+        android:layout_width="47dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/imgBoton"
+        android:onClick="screenShot"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spSeleccion"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/radio"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spSeleccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/btScreenShot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <TableLayout
+        android:id="@+id/tableDatos"
+        android:layout_width="310dp"
+        android:layout_height="478dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/background_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btScreenShot">
+
+        <TableRow
+            android:id="@+id/trMatricula"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvMatricula"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/Matricula"
+                android:textAllCaps="false"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etMatricula"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:autofillHints=""
+                android:ems="7"
+                android:hint="@string/etVacio"
+                android:inputType="textCapCharacters"
+                android:maxLength="7"
+                android:nextFocusRight="@id/etnumVuelo"
+                tools:targetApi="o" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trVuelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_dark">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tvNumVuelo"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="149dp" />
+
+            <EditText
+                android:id="@+id/etnumVuelo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="4"
+                android:hint="@string/etVacio"
+                android:inputType="number"
+                android:maxLength="4"
+                android:nextFocusRight="@id/etDesde"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/etDesde"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="3"
+                android:hint="@string/De"
+                android:inputType="textCapCharacters"
+                android:maxLength="3"
+                android:nextFocusRight="@id/etHacia"
+                android:nextFocusDown="@id/etHacia"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/etNumVuelo"
+                app:layout_constraintTop_toBottomOf="@+id/tvMatriculaHK"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/etHacia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="3"
+                android:hint="@string/A"
+                android:inputType="textCapCharacters"
+                android:maxLength="3"
+                android:nextFocusRight="@id/etDoorHora"
+                android:nextFocusDown="@id/etHoraStartTrip"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/tve3"
+                app:layout_constraintStart_toEndOf="@+id/etDesde"
+                app:layout_constraintTop_toBottomOf="@+id/tvMatriculaHK"
+                tools:targetApi="o" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trPuertas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Doors" />
+
+            <EditText
+                android:id="@+id/etDoorHora"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/_00"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etDoorMin"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/tv14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2" />
+
+            <EditText
+                android:id="@+id/etDoorMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/_00"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etHoraStartTrip"
+                tools:targetApi="o" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btPuertas"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="SetHoraPuertas"
+                android:text="@string/Set" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trPrendida"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray">
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Prendida" />
+
+            <EditText
+                android:id="@+id/etHoraStartTrip"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/_00"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etMinStartTrip"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/tv15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2" />
+
+            <EditText
+                android:id="@+id/etMinStartTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/_00"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etHoraStartAer"
+                tools:targetApi="o" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btPrendida"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="SetHoraPrendida"
+                android:text="@string/Set" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trDecolage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Despegue" />
+
+            <EditText
+                android:id="@+id/etHoraStartAer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/_00"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etMinStartAer"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/tv16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2" />
+
+            <EditText
+                android:id="@+id/etMinStartAer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/_00"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etHoraFinishAer"
+                tools:targetApi="o" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btDecolage"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="SetHoraDecolaje"
+                android:text="@string/Set" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trAterrizaje"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Aterriza" />
+
+            <EditText
+                android:id="@+id/etHoraFinishAer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/_00"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etMinFinishAer"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/tv17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2" />
+
+            <EditText
+                android:id="@+id/etMinFinishAer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/_00"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etHoraFinishTrip"
+                tools:targetApi="o" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btAterrizaje"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="SetHoraAterrizaje"
+                android:text="@string/Set" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trApagada"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Apagada" />
+
+            <EditText
+                android:id="@+id/etHoraFinishTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/_00"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etMinFinishTrip"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/tv18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2" />
+
+            <EditText
+                android:id="@+id/etMinFinishTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/_00"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etPaxTotal"
+                tools:targetApi="o" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btApagada"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="SetHoraApagada"
+                android:text="@string/Set" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trPasajeros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_orange_light">
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Pax" />
+
+            <EditText
+                android:id="@+id/etPaxTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/etVacio"
+                android:inputType="number"
+                android:maxLength="3"
+                android:nextFocusRight="@id/etHombres"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Hombres" />
+
+            <EditText
+                android:id="@+id/etHombres"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/etVacio"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etMujeres"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Mujeres" />
+
+            <EditText
+                android:id="@+id/etMujeres"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/etVacio"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etNinos"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Ninos" />
+
+            <EditText
+                android:id="@+id/etNinos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/etVacio"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etNibra"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Nibra" />
+
+            <EditText
+                android:id="@+id/etNibra"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="2"
+                android:hint="@string/etVacio"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@id/etCarga"
+                tools:targetApi="o" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trCarga"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_bright">
+
+            <TextView
+                android:id="@+id/tv12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Carga" />
+
+            <EditText
+                android:id="@+id/etCarga"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="4"
+                android:hint="@string/etVacio"
+                android:inputType="number"
+                android:maxLength="5"
+                android:nextFocusRight="@id/etRemanente"
+                android:textSize="14sp"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/tv13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ComRemanente" />
+
+            <EditText
+                android:id="@+id/etRemanente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="6"
+                android:hint="@string/etVacio"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textSize="14sp"
+                tools:targetApi="o" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_green_light">
+
+            <Button
+                android:id="@+id/btSave"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="Insertar"
+                android:text="@string/Add" />
+
+            <Button
+                android:id="@+id/btDelete"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="Eliminar"
+                android:text="@string/Eliminar" />
+
+            <Button
+                android:id="@+id/btModificar"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="Modificar"
+                android:text="@string/Modificar" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

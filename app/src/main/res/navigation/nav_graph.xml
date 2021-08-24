@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menu">
+
+    <activity
+        android:id="@+id/menu"
+        android:name="apps.paquete.andres.operat11.Menu"
+        android:label="activity_menu"
+        tools:layout="@layout/activity_menu" />
+    <activity
+        android:id="@+id/calculatorActivity"
+        android:name="apps.paquete.andres.operat11.CalculatorActivity"
+        android:label="activity_calculator"
+        tools:layout="@layout/activity_calculator" />
+    <activity
+        android:id="@+id/fullActivity"
+        android:name="apps.paquete.andres.operat11.FullActivity"
+        android:label="activity_full"
+        tools:layout="@layout/activity_full" />
+</navigation>

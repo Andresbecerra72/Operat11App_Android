@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FullPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="apps.paquete.andres.operat11.FullActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/etHoraStartAer"
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:ems="2"
+        android:hint="@string/_00"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusRight="@id/etMinStartAer"
+        android:onClick="setvisible1"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tve6"
+        app:layout_constraintStart_toEndOf="@+id/etMinFinishTrip"
+        app:layout_constraintTop_toBottomOf="@+id/tve3"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etMinStartAer"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:ems="2"
+        android:hint="@string/_00"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusRight="@id/etHoraFinishAer"
+        android:onClick="setvisible1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tve6"
+        app:layout_constraintTop_toBottomOf="@+id/tve3"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etHoraFinishAer"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:ems="2"
+        android:hint="@string/_00"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusRight="@id/etMinFinishAer"
+        android:onClick="setvisible1"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tve7"
+        app:layout_constraintStart_toEndOf="@+id/etMinStartAer"
+        app:layout_constraintTop_toBottomOf="@+id/tve3"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etMinFinishAer"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:ems="2"
+        android:hint="@string/_00"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusForward="@id/etPax"
+        android:onClick="setvisible1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tve7"
+        app:layout_constraintTop_toBottomOf="@+id/tve3"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tvFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/tvFecha"
+        android:textColor="#0B7CF3"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/etRegistro"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
+        android:ems="6"
+        android:hint="@string/etRegistro"
+        android:inputType="number"
+        android:maxLength="6"
+        android:nextFocusDown="@id/etNumVuelo"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etNumVuelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="4"
+        android:hint="@string/Vuelo"
+        android:inputType="number"
+        android:maxLength="4"
+        android:nextFocusDown="@id/etDesde"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatriculaHK"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etPax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
+        android:ems="3"
+        android:hint="@string/Pax"
+        android:inputType="number"
+        android:nextFocusDown="@id/etCarga"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tve2"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etHoraStartTrip"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:ems="2"
+        android:hint="@string/_00"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusRight="@id/etMinStartTrip"
+        android:onClick="setvisible1"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tve4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tve1"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etMinStartTrip"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:ems="2"
+        android:hint="@string/_00"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusRight="@id/etHoraFinishTrip"
+        android:onClick="setvisible1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tve4"
+        app:layout_constraintTop_toBottomOf="@+id/tve1"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etHoraFinishTrip"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:ems="2"
+        android:hint="@string/_00"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusRight="@id/etMinFinishTrip"
+        android:onClick="setvisible1"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tve5"
+        app:layout_constraintStart_toEndOf="@+id/etMinStartTrip"
+        app:layout_constraintTop_toBottomOf="@+id/tve1"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etMinFinishTrip"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:autofillHints=""
+        android:ems="2"
+        android:hint="@string/_00"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusRight="@id/etHoraStartAer"
+        android:onClick="setvisible1"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/etHoraStartAer"
+        app:layout_constraintStart_toEndOf="@+id/tve5"
+        app:layout_constraintTop_toBottomOf="@+id/tve1"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etCarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
+        android:ems="4"
+        android:hint="@string/Carga"
+        android:inputType="number"
+        android:nextFocusDown="@id/etFuel"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/etPax"
+        app:layout_constraintTop_toBottomOf="@+id/tve2"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etFuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
+        android:ems="4"
+        android:hint="@string/Fuel"
+        android:inputType="number"
+        android:nextFocusDown="@id/etRegistro"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/etCarga"
+        app:layout_constraintTop_toBottomOf="@+id/tve2"
+        tools:targetApi="o" />
+
+    <Spinner
+        android:id="@+id/spAeronave"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/tvMatriculaHK"
+        app:layout_constraintTop_toBottomOf="@+id/etRegistro" />
+
+    <TextView
+        android:id="@+id/tvTipoAeronave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/TipoAeronave"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/etNumVuelo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRegistro" />
+
+    <TextView
+        android:id="@+id/tvMatriculaHK"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Matricula"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tvTipoAeronave"
+        app:layout_constraintTop_toBottomOf="@+id/etRegistro" />
+
+    <Button
+        android:id="@+id/btSet"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="InsertCrew"
+        android:text="@string/Set"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/tve12"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalTrip"
+        app:layout_constraintTop_toBottomOf="@+id/etDesde" />
+
+    <EditText
+        android:id="@+id/etDesde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="3"
+        android:hint="@string/De"
+        android:inputType="textCapCharacters"
+        android:maxLength="3"
+        android:nextFocusDown="@id/etHacia"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/etNumVuelo"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatriculaHK"
+        android:autofillHints="" tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etHacia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="3"
+        android:hint="@string/A"
+        android:inputType="textCapCharacters"
+        android:maxLength="3"
+        android:nextFocusDown="@id/etHoraStartTrip"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/etDesde"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatriculaHK"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="127dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginLeft="123dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginRight="133dp"
+        android:text="@string/Titulo"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="cursive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tve1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
+        android:text="@string/TiempoTripulacion"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/tve3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDesde" />
+
+    <TextView
+        android:id="@+id/tve2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="27dp"
+        android:text="@string/CondicionVuelo"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tve11" />
+
+    <TextView
+        android:id="@+id/tve8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/vfr"
+        app:layout_constraintBottom_toTopOf="@+id/tvVfr1"
+        app:layout_constraintStart_toEndOf="@+id/tve2"
+        app:layout_constraintTop_toBottomOf="@+id/btSet" />
+
+    <TextView
+        android:id="@+id/tve9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/ifr"
+        app:layout_constraintBottom_toTopOf="@+id/tvIfr1"
+        app:layout_constraintStart_toEndOf="@+id/tve8"
+        app:layout_constraintTop_toBottomOf="@+id/btSet" />
+
+    <TextView
+        android:id="@+id/tve10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/nocturne"
+        app:layout_constraintBottom_toTopOf="@+id/tvNoc1"
+        app:layout_constraintStart_toEndOf="@+id/tve9"
+        app:layout_constraintTop_toBottomOf="@+id/btSet" />
+
+    <TextView
+        android:id="@+id/tve11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="@string/TotalTrip"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvTotalTrip"
+        app:layout_constraintEnd_toEndOf="@+id/etHoraStartTrip"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tve12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/TotalAero"
+        app:layout_constraintStart_toStartOf="@+id/etHoraStartAer"
+        app:layout_constraintTop_toBottomOf="@+id/etMinStartAer" />
+
+    <TextView
+        android:id="@+id/tvTotalAer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="@string/_00_00"
+        app:layout_constraintStart_toEndOf="@+id/tve12"
+        app:layout_constraintTop_toBottomOf="@+id/etHoraFinishAer" />
+
+    <TextView
+        android:id="@+id/tvVfr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:text="@string/_00_00"
+        app:layout_constraintStart_toEndOf="@+id/tve2"
+        app:layout_constraintTop_toBottomOf="@+id/tve8" />
+
+    <TextView
+        android:id="@+id/tvIfr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/_00_00"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNoc1"
+        app:layout_constraintStart_toEndOf="@+id/tvVfr1"
+        app:layout_constraintTop_toBottomOf="@+id/tve9" />
+
+    <TextView
+        android:id="@+id/tvNoc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/_00_00"
+        app:layout_constraintStart_toEndOf="@+id/tvIfr1"
+        app:layout_constraintTop_toBottomOf="@+id/tve10" />
+
+    <TextView
+        android:id="@+id/tvTotalTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/_00_00"
+        app:layout_constraintStart_toEndOf="@+id/tve11"
+        app:layout_constraintTop_toBottomOf="@+id/etMinStartTrip" />
+
+    <TextView
+        android:id="@+id/tve3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/TiempoAeronave"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tve1"
+        app:layout_constraintStart_toStartOf="@+id/etHoraStartAer"
+        app:layout_constraintTop_toBottomOf="@+id/etDesde" />
+
+    <TextView
+        android:id="@+id/tve4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etMinStartTrip"
+        app:layout_constraintEnd_toStartOf="@+id/etMinStartTrip"
+        app:layout_constraintStart_toEndOf="@+id/etHoraStartTrip" />
+
+    <TextView
+        android:id="@+id/tve5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etMinFinishTrip"
+        app:layout_constraintEnd_toStartOf="@+id/etMinFinishTrip"
+        app:layout_constraintStart_toEndOf="@+id/etHoraFinishTrip" />
+
+    <TextView
+        android:id="@+id/tve6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/_2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/etMinStartAer"
+        app:layout_constraintStart_toEndOf="@+id/etHoraStartAer"
+        app:layout_constraintTop_toBottomOf="@+id/tve3" />
+
+    <TextView
+        android:id="@+id/tve7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/_2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/etMinFinishAer"
+        app:layout_constraintStart_toEndOf="@+id/etHoraFinishAer"
+        app:layout_constraintTop_toBottomOf="@+id/tve3" />
+
+    <Button
+        android:id="@+id/Prendida"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="horaStartCrew"
+        android:text="@string/Prendida"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/Decolage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPax" />
+
+    <Button
+        android:id="@+id/Decolage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:onClick="horaStartAircraft"
+        android:text="@string/Decolaje"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/Aterrizaje"
+        app:layout_constraintStart_toEndOf="@+id/Prendida"
+        app:layout_constraintTop_toBottomOf="@+id/etCarga" />
+
+    <Button
+        android:id="@+id/Aterrizaje"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:onClick="horaFinishAircraft"
+        android:text="@string/Aterrizaje"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/Apagada"
+        app:layout_constraintStart_toEndOf="@+id/Decolage"
+        app:layout_constraintTop_toBottomOf="@+id/etCarga" />
+
+    <Button
+        android:id="@+id/Apagada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:onClick="horaFinishCrew"
+        android:text="@string/Apagada"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Aterrizaje"
+        app:layout_constraintTop_toBottomOf="@+id/etFuel" />
+
+    <Button
+        android:id="@+id/btAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="Insertar"
+        android:text="@string/Add"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/btConsultar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btConsultar"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:onClick="Buscar"
+        android:text="@string/Buscar"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/btModificar"
+        app:layout_constraintStart_toEndOf="@+id/btAdd"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:onClick="Eliminar"
+        android:text="@string/Eliminar"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btModificar"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btArchivoPDF"
+        android:layout_width="60dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:onClick="pdfView"
+        android:text="@string/PDF"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/etHacia"
+        app:layout_constraintTop_toBottomOf="@+id/btRadio" />
+
+    <Button
+        android:id="@+id/btDetalles"
+        android:layout_width="60dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:onClick="GetDetailPage"
+        android:text="@string/Fuel"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/etHacia"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <Button
+        android:id="@+id/btModificar"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:onClick="Modificar"
+        android:text="@string/Modificar"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/btEliminar"
+        app:layout_constraintStart_toEndOf="@+id/btConsultar"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginRight="153dp"
+        android:text="@string/Registros"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Decolage" />
+
+    <Button
+        android:id="@+id/btRadio"
+        android:layout_width="60dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:onClick="GetRadioPage"
+        android:text="@string/btRadio"
+        app:layout_constraintStart_toEndOf="@+id/etHacia"
+        app:layout_constraintTop_toBottomOf="@+id/btDetalles" />
+
+    <TextView
+        android:id="@+id/tvDaily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="88dp"
+        android:background="@android:color/holo_green_light"
+        android:text="@string/_00_00"
+        app:layout_constraintStart_toEndOf="@+id/etFuel"
+        app:layout_constraintTop_toBottomOf="@+id/tve12" />
+
+</android.support.constraint.ConstraintLayout>

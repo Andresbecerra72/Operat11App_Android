@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculatorpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context="apps.paquete.andres.operat11.CalculatorActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ToggleButton
+        android:id="@+id/tgResulFuel"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_redondo"
+        android:onClick="CalculoFuel"
+        android:text="@string/togglebutton"
+        android:textColor="@android:color/white"
+        android:textOff="="
+        android:textOn="C"
+        android:textSize="48sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/tv10"
+        app:layout_constraintTop_toBottomOf="@+id/tgConverUnidades" />
+
+    <TextView
+        android:id="@+id/tv12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Fuel_Trip"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv11" />
+
+    <TextView
+        android:id="@+id/tv13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Remain"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv12" />
+
+    <TextView
+        android:id="@+id/tvTotalCrew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="#85BFC6"
+        android:text="@string/_00_00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv5" />
+
+    <TextView
+        android:id="@+id/tvFlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/nocturne"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv8"
+        app:layout_constraintTop_toBottomOf="@+id/btinsertCrew" />
+
+    <TextView
+        android:id="@+id/tve1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/vfr"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv5"
+        app:layout_constraintTop_toBottomOf="@+id/btinsertCrew" />
+
+    <ImageButton
+        android:id="@+id/finishAircraftButton"
+        android:layout_width="69dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="6dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/a_c_finish"
+        android:onClick="horaFinishAircraft"
+        android:scaleType="centerInside"
+        android:src="@drawable/image_button_landing"
+        app:layout_constraintStart_toEndOf="@+id/newDataButton"
+        app:layout_constraintTop_toBottomOf="@+id/etTimeFinishMinutes" />
+
+    <ImageButton
+        android:id="@+id/newDataButton"
+        android:layout_width="69dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="72dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/image"
+        android:onClick="enableButtons1"
+        android:scaleType="centerInside"
+        android:tint="?attr/colorButtonNormal"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/startAircraftButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/edit" />
+
+    <TextView
+        android:id="@+id/tve2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="@string/_2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/etTimeStartHour"
+        app:layout_constraintTop_toBottomOf="@+id/startCrewButton" />
+
+    <TextView
+        android:id="@+id/tvIfr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginLeft="49dp"
+        android:text="@string/_00_00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tve1"
+        app:layout_constraintTop_toBottomOf="@+id/tv8" />
+
+    <Button
+        android:id="@+id/startCrewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:onClick="horaStartCrew"
+        android:text="@string/crew_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTimeFinishMinutes"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/_00"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusForward="@id/etTimeStartHour2"
+        android:onClick="setvisible1"
+        android:textIsSelectable="false"
+        app:layout_constraintStart_toEndOf="@+id/tv4"
+        app:layout_constraintTop_toBottomOf="@+id/finishCrewButton"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etTimeFinishMinutes2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/_00"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusForward="@id/etTimeStartHour"
+        android:onClick="setvisible1"
+        android:textIsSelectable="false"
+        app:layout_constraintStart_toEndOf="@+id/tv9"
+        app:layout_constraintTop_toBottomOf="@+id/finishAircraftButton"
+        tools:ignore="UnusedAttribute"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/_2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/etTimeFinishHour"
+        app:layout_constraintTop_toBottomOf="@+id/finishCrewButton" />
+
+    <TextView
+        android:id="@+id/tvNocturno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="@string/_00_00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tv8"
+        app:layout_constraintTop_toBottomOf="@+id/tvFlight" />
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/crew"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btinsertCrew" />
+
+    <Button
+        android:id="@+id/btinsertCrew"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/button_redondo"
+        android:onClick="InsertCrew"
+        android:text="@string/igual"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/startAircraftButton"
+        app:layout_constraintTop_toBottomOf="@+id/newDataButton" />
+
+    <EditText
+        android:id="@+id/etTimeStartHour"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/_00"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusForward="@id/etTimeStartMinutes"
+        android:onClick="setvisible1"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startCrewButton"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/a_c"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvFlight"
+        app:layout_constraintTop_toBottomOf="@+id/btinsertCrew" />
+
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/_2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/etTimeStartHour2"
+        app:layout_constraintTop_toBottomOf="@+id/startAircraftButton" />
+
+    <Button
+        android:id="@+id/finishCrewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="12dp"
+        android:onClick="horaFinishCrew"
+        android:text="@string/crew_finish"
+        app:layout_constraintStart_toEndOf="@+id/startCrewButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvVfr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:text="@string/_00_00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tv5"
+        app:layout_constraintTop_toBottomOf="@+id/tve1" />
+
+    <ImageButton
+        android:id="@+id/startAircraftButton"
+        android:layout_width="69dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="6dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/a_c_start"
+        android:onClick="horaStartAircraft"
+        android:scaleType="centerInside"
+        android:src="@drawable/image_button_takeoff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTimeStartHour" />
+
+    <EditText
+        android:id="@+id/etTimeStartHour2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/_00"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusForward="@id/etTimeStartMinutes2"
+        android:onClick="setvisible1"
+        android:textIsSelectable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startAircraftButton"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etTimeStartMinutes"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/_00"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusForward="@id/etTimeFinishHour"
+        android:onClick="setvisible1"
+        android:textIsSelectable="false"
+        app:layout_constraintStart_toEndOf="@+id/tve2"
+        app:layout_constraintTop_toBottomOf="@+id/startCrewButton"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tv8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/ifr"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tve1"
+        app:layout_constraintTop_toBottomOf="@+id/btinsertCrew" />
+
+    <EditText
+        android:id="@+id/etTimeStartMinutes2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/_00"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusForward="@id/etTimeFinishHour2"
+        android:onClick="setvisible1"
+        android:textIsSelectable="false"
+        app:layout_constraintStart_toEndOf="@+id/tv7"
+        app:layout_constraintTop_toBottomOf="@+id/startAircraftButton"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etTimeFinishHour"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/_00"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusForward="@id/etTimeFinishMinutes"
+        android:onClick="setvisible1"
+        android:textIsSelectable="false"
+        app:layout_constraintStart_toEndOf="@+id/newDataButton"
+        app:layout_constraintTop_toBottomOf="@+id/finishCrewButton"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etTimeFinishHour2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/_00"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusForward="@id/etTimeFinishMinutes2"
+        android:onClick="setvisible1"
+        android:textIsSelectable="false"
+        app:layout_constraintStart_toEndOf="@+id/btinsertCrew"
+        app:layout_constraintTop_toBottomOf="@+id/finishAircraftButton"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tv9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/_2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/etTimeFinishHour2"
+        app:layout_constraintTop_toBottomOf="@+id/finishAircraftButton" />
+
+    <TextView
+        android:id="@+id/tvTotalAircraft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:background="#85BFC6"
+        android:text="@string/_00_00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tvFlight"
+        app:layout_constraintTop_toBottomOf="@+id/tv6" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalCrew" />
+
+    <TextView
+        android:id="@+id/tv10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Fuel_OUT"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etfull" />
+
+    <TextView
+        android:id="@+id/tv11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Fuel_IN"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv10" />
+
+    <EditText
+        android:id="@+id/etfull"
+        android:layout_width="80dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/Quantity"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="8"
+        android:nextFocusForward="@id/etTakeoffFuel"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/etTakeoffFuel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etTakeoffFuel"
+        android:layout_width="80dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/TO_Fuel"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="8"
+        android:nextFocusForward="@id/etLandingFuel"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/etLandingFuel"
+        app:layout_constraintStart_toEndOf="@+id/etfull"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etLandingFuel"
+        android:layout_width="80dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/LND_Fuel"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="8"
+        android:nextFocusForward="@id/etShutdownFuel"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/etShutdownFuel"
+        app:layout_constraintStart_toEndOf="@+id/etTakeoffFuel"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etShutdownFuel"
+        android:layout_width="80dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/Eng_SD"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="8"
+        android:nextFocusForward="@id/etfull"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etLandingFuel"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:targetApi="o" />
+
+    <ToggleButton
+        android:id="@+id/tgConverUnidades"
+        android:layout_width="73dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/togglebutton_color"
+        android:onClick="ConversionUnidades"
+        android:text="@string/togglebutton"
+        android:textOff="@string/lbs"
+        android:textOn="@string/kg"
+        app:layout_constraintStart_toEndOf="@+id/tv10"
+        app:layout_constraintTop_toBottomOf="@+id/etShutdownFuel" />
+
+    <TextView
+        android:id="@+id/tvFuelout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="10dp"
+        android:maxLength="10"
+        android:text="@string/_00"
+        app:layout_constraintStart_toEndOf="@+id/tv10"
+        app:layout_constraintTop_toBottomOf="@+id/etTakeoffFuel" />
+
+    <TextView
+        android:id="@+id/tvFuelin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="12dp"
+        android:maxLength="10"
+        android:text="@string/_00"
+        app:layout_constraintStart_toEndOf="@+id/tv11"
+        app:layout_constraintTop_toBottomOf="@+id/tvFuelout" />
+
+    <TextView
+        android:id="@+id/tvFuelTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="12dp"
+        android:maxLength="10"
+        android:text="@string/_00"
+        app:layout_constraintStart_toEndOf="@+id/tv12"
+        app:layout_constraintTop_toBottomOf="@+id/tvFuelin" />
+
+    <TextView
+        android:id="@+id/tvRemain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="13dp"
+        android:maxLength="10"
+        android:text="@string/_00"
+        app:layout_constraintStart_toEndOf="@+id/tv13"
+        app:layout_constraintTop_toBottomOf="@+id/tvFuelTrip" />
+
+</android.support.constraint.ConstraintLayout>

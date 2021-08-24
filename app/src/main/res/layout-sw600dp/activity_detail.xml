@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/DetailPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="apps.paquete.andres.operat11.DetailActivity">
+
+    <TextView
+        android:id="@+id/tv14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="9dp"
+        android:text="@string/tvConsumo"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btAdd"
+        app:layout_constraintEnd_toStartOf="@+id/tvConsumo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv13" />
+
+    <TextView
+        android:id="@+id/tvConsumo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="145dp"
+        android:layout_marginRight="145dp"
+        android:layout_marginBottom="9dp"
+        android:text="@string/tvVacio"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv14"
+        app:layout_constraintTop_toTopOf="@+id/tv14" />
+
+    <TextView
+        android:id="@+id/tvFuelTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:maxLength="10"
+        android:text="@string/_00"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvFuelout"
+        app:layout_constraintTop_toBottomOf="@+id/tvFuelout" />
+
+    <ToggleButton
+        android:id="@+id/tgResulFuel"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_redondo"
+        android:onClick="CalculoFuel"
+        android:text="@string/togglebutton"
+        android:textColor="@android:color/white"
+        android:textOff="="
+        android:textOn="C"
+        android:textSize="48sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toEndOf="@+id/tv13"
+        app:layout_constraintTop_toBottomOf="@+id/tgConverUnidades"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etfull"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:nextFocusForward="@id/etTakeoffFuel"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/etFuelMin"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="8"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/etTakeoffFuel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv6"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tvFuelin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:maxLength="10"
+        android:text="@string/_00"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvFuelTrip"
+        app:layout_constraintTop_toBottomOf="@+id/tvFuelTrip" />
+
+    <TextView
+        android:id="@+id/tv11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Fuel_Trip"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv10" />
+
+    <EditText
+        android:id="@+id/etShutdownFuel"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/Eng_SD"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="8"
+        android:nextFocusForward="@id/etfull"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etLandingFuel"
+        app:layout_constraintTop_toBottomOf="@+id/tv6"
+        tools:targetApi="o" />
+
+    <ToggleButton
+        android:id="@+id/tgConverUnidades"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/togglebutton_color"
+        android:onClick="ConversionUnidades"
+        android:text="@string/togglebutton"
+        android:textOff="@string/lbs"
+        android:textOn="@string/kg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintStart_toEndOf="@+id/tv10"
+        app:layout_constraintTop_toBottomOf="@+id/etShutdownFuel" />
+
+    <TextView
+        android:id="@+id/tvFuelout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="27dp"
+        android:maxLength="10"
+        android:text="@string/_00"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv10"
+        app:layout_constraintTop_toBottomOf="@+id/etfull" />
+
+    <TextView
+        android:id="@+id/tv10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="7dp"
+        android:text="@string/Fuel_OUT"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv11"
+        app:layout_constraintStart_toStartOf="@+id/tv11"
+        app:layout_constraintTop_toBottomOf="@+id/etfull" />
+
+    <TextView
+        android:id="@+id/tv13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/Remain"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv12" />
+
+    <EditText
+        android:id="@+id/etLandingFuel"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginRight="93dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/LND_Fuel"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="8"
+        android:nextFocusForward="@id/etShutdownFuel"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etShutdownFuel"
+        app:layout_constraintEnd_toEndOf="@+id/tgResulFuel"
+        app:layout_constraintStart_toEndOf="@+id/etTakeoffFuel"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etTakeoffFuel"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="195dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="true"
+        android:hint="@string/TO_Fuel"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="8"
+        android:nextFocusForward="@id/etLandingFuel"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btAdd"
+        app:layout_constraintStart_toEndOf="@+id/etfull"
+        app:layout_constraintTop_toBottomOf="@+id/tv6"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tvRemain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="15dp"
+        android:maxLength="10"
+        android:text="@string/_00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btAdd"
+        app:layout_constraintStart_toStartOf="@+id/tvFuelin"
+        app:layout_constraintTop_toBottomOf="@+id/tvFuelin"
+        app:layout_constraintVertical_bias="0.16" />
+
+    <TextView
+        android:id="@+id/tv12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/Fuel_IN"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv11" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/RegistrosFuel"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNumVuelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="@string/tvVacio"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/etTow"
+        app:layout_constraintStart_toStartOf="@+id/tvRegistro" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvRegistro"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:text="@string/tvNumVuelo"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvNumVuelo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/tvVacio"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <TextView
+        android:id="@+id/tvOrigen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/tvVacio"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/etAltura"
+        app:layout_constraintStart_toStartOf="@+id/tv3" />
+
+    <TextView
+        android:id="@+id/tvDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/tvVacio"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv4"
+        app:layout_constraintTop_toBottomOf="@+id/tv4" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:text="@string/tvOrigen"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv4"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginRight="116dp"
+        android:text="@string/tvDestino"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <EditText
+        android:id="@+id/etTow"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+
+        android:ems="10"
+        android:hint="@string/etTow"
+        android:inputType="number"
+        android:textSize="18sp"
+        android:nextFocusDown="@id/etAltura"
+        app:layout_constraintEnd_toStartOf="@+id/etAltura"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <EditText
+        android:id="@+id/etVelocidad"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginRight="120dp"
+        android:ems="10"
+        android:hint="@string/etVelocidad"
+        android:inputType="numberDecimal"
+        android:textSize="18sp"
+        android:nextFocusDown="@id/etEng1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <EditText
+        android:id="@+id/etAltura"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+
+        android:hint="@string/etAltura"
+        android:inputType="number"
+        android:textSize="18sp"
+        android:nextFocusDown="@id/etVelocidad"
+        app:layout_constraintEnd_toStartOf="@+id/etVelocidad"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:text="@string/tvFuelFlow"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etEng1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etEng1"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="8"
+        android:hint="@string/etEngine1"
+        android:inputType="number"
+        android:textSize="18sp"
+        android:nextFocusDown="@id/etEng2"
+        app:layout_constraintEnd_toStartOf="@+id/etEng2"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toEndOf="@+id/tv5"
+        app:layout_constraintTop_toBottomOf="@+id/etTow" />
+
+    <EditText
+        android:id="@+id/etEng2"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:ems="8"
+        android:hint="@string/etEngine2"
+        android:inputType="number"
+        android:textSize="18sp"
+        android:nextFocusDown="@id/etfull"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etVelocidad" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/tvCaculosFuel"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/etEng2"
+        app:layout_constraintStart_toEndOf="@+id/tv5"
+        app:layout_constraintTop_toBottomOf="@+id/etEng1" />
+
+    <Button
+        android:id="@+id/btAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginRight="53dp"
+        android:onClick="GuardarDatos"
+        android:text="@string/Add"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv13" />
+</android.support.constraint.ConstraintLayout>

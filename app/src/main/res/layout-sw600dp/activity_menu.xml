@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MenuFondo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorButtonNormal"
+    tools:context="apps.paquete.andres.operat11.Menu"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageButton
+        android:id="@+id/contadorBotton"
+        android:layout_width="210dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="177dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="235dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:background="@mipmap/plancontador"
+        android:contentDescription="@string/ContBoton"
+        android:onClick="GetContadorPage"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioButton"
+        app:layout_constraintTop_toBottomOf="@+id/FullButton" />
+
+    <ImageButton
+        android:id="@+id/radioButton"
+        android:layout_width="210dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="177dp"
+        android:layout_marginBottom="235dp"
+        android:adjustViewBounds="true"
+        android:background="@mipmap/operador"
+        android:contentDescription="@string/RadioBotton"
+        android:onClick="GetRadioPage"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/contadorBotton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CalculatorButton" />
+
+    <ImageButton
+        android:id="@+id/CalculatorButton"
+        android:layout_width="210dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="210dp"
+        android:adjustViewBounds="true"
+        android:background="@mipmap/calculator"
+        android:contentDescription="@string/CalcBoton"
+        android:onClick="GetCalculator"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toStartOf="@+id/FullButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/FullButton"
+        android:layout_width="210dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:adjustViewBounds="true"
+        android:background="@mipmap/report"
+        android:contentDescription="@string/FullBoton"
+        android:onClick="GetFull"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/CalculatorButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="#607D8B"
+        android:contentDescription="@string/ContBoton"
+        android:onClick="GetOperatorPage"
+        android:text="@string/btCaloperacion"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CalculatorButton" />
+</android.support.constraint.ConstraintLayout>
